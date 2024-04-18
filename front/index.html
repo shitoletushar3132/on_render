@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random number</title>
+  </head>
+  <body>
+    <p id="display">hii</p>
+    <button id="btn">click</button>
+    <script>
+      function setRand(num) {
+        document
+          .getElementById("display")
+          .innerText = `the generated number is : ${num}`;
+      }
+      document.getElementById("btn").addEventListener("click", () => {
+        fetch("http://localhost:3000/random-number")
+          .then((Response) => Response.json())
+          .then((data) => setRand(data))
+          .catch((error) => console.log("error",error));
+      });
+    </script>
+  </body>
+</html>
