@@ -7,7 +7,7 @@ app.use(cors());
 const port = 3000;
 
 function randomge(){
-    return Math.floor(Math.random() *100 );
+    return {data : Math.floor(Math.random() *100 )};
 }
 let numbers = {
     id:1,
