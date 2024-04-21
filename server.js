@@ -13,7 +13,7 @@ let numbers = {
     id:1,
     data : randomge() }
 
-app.get('/random-number',(req,res)=>{
+app.get('/',(req,res)=>{
     res.json(randomge())
 })
 
